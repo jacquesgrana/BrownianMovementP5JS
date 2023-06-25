@@ -1,11 +1,11 @@
   var deltaI = window.innerWidth;
   var deltaJ = window.innerHeight;
-  var radius = 1;
+  var radius = 2;
   var stepI = radius*2;
   var stepJ = radius*2;
   var deltaX = Math.round(deltaI/stepI);
   var deltaY = Math.round(deltaJ/stepJ);
-  var maxBallsNb = 2000;
+  var maxBallsNb = 6000;
   var backGroundColor;
   var ballStrokeColor;
   var ballStrokeWidth = 0;
