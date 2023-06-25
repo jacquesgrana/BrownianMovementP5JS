@@ -5,11 +5,11 @@
   var stepJ = radius*2;
   var deltaX = Math.round(deltaI/stepI);
   var deltaY = Math.round(deltaJ/stepJ);
-  var maxBallsNb = 6000;
+  var maxBallsNb = 3000;
   var backGroundColor;
   var ballStrokeColor;
   var ballStrokeWidth = 0;
-  var appFrameRate = 25;
+  var appFrameRate = 60;
   var gradientStart = 1;
   var gradientRange = 5;
   
