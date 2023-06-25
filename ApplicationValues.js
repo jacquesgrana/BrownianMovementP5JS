@@ -5,7 +5,7 @@
   var stepJ = radius*2;
   var deltaX = Math.round(deltaI/stepI);
   var deltaY = Math.round(deltaJ/stepJ);
-  var maxBallsNb = 10000;
+  var maxBallsNb = 2000;
   var backGroundColor;
   var ballStrokeColor;
   var ballStrokeWidth = 0;
