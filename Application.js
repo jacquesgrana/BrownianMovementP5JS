@@ -91,7 +91,7 @@ class Application {
     noStroke();
     fill(textColor);
     textSize(12);
-    text("Nb de balles : " + maxBallsNb, deltaI - 300, deltaJ - blockHeight + 40);
+    text("Nb de particules : " + maxBallsNb, deltaI - 300, deltaJ - blockHeight + 40);
     this.buttonDraw.drawButton();
     this.buttonDraw.run();
     if(this.buttonDraw.getIsClicked()) {
@@ -109,7 +109,7 @@ class Application {
       fill(textColor);
       textSize(12);
       text("Settings : [S ou s] / Aide : [H ou h]", 20, deltaJ - 40);
-      text("Application qui simule le mouvement brownien de balles qui sont colorées suivant l'ordre d'apparition.", 20, deltaJ - 20);
+      text("Application qui simule le mouvement brownien de particules qui sont colorées suivant leur ordre d'apparition.", 20, deltaJ - 20);
     }
   }
 }
