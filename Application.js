@@ -24,7 +24,7 @@ class Application {
     frameRate(appFrameRate);
     this.initBalls();
     this.sliderBallsNumber = new Slider(20, deltaJ - blockHeight + 20, 500, 40, 10, 10, 10000, maxBallsNb,
-    backGroundColor, lightBackGroundColor, strokeColor, hoverColor);
+    lightBackGroundColor, lightBackGroundColor, strokeColor, hoverColor);
     this.sliderBallsNumber.init();
     this.buttonDraw = new Button(deltaI - 100, deltaJ - blockHeight + 20, 80, 40, "Reset", lightBackGroundColor, strokeColor, strokeColor, hoverColor, backGroundColor, true);
   }
