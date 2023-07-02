@@ -30,6 +30,7 @@ Méthode qui modifie les coordonnées de la balle de manière aléatoire dans le
 */
   moveRandomly() {
     let newDir = (int) (random(8));
+    //this.fillColor = calculateRVB(newDir, 7, gradientStart, gradientRange);
     switch(newDir) {
     case 0 :
       this.posI -= stepI;
