@@ -26,7 +26,7 @@ class Application {
     this.sliderBallsNumber = new Slider(20, deltaJ - blockHeight + 20, 500, 40, 10, 10, 10000, maxBallsNb,
     lightBackGroundColor, lightBackGroundColor, strokeColor, hoverColor);
     this.sliderBallsNumber.init();
-    this.buttonDraw = new Button(deltaI - 100, deltaJ - blockHeight + 20, 80, 40, "Appliquer", lightBackGroundColor, strokeColor, strokeColor, hoverColor, backGroundColor, true);
+    this.buttonDraw = new Button(deltaI - 100, deltaJ - blockHeight + 20, 100, 40, "Appliquer", lightBackGroundColor, strokeColor, strokeColor, hoverColor, backGroundColor, true);
   }
   
   /**
