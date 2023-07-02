@@ -23,7 +23,7 @@ class Application {
     initColors();
     frameRate(appFrameRate);
     this.initBalls();
-    this.sliderBallsNumber = new Slider(20, deltaJ - blockHeight + 20, 500, 40, 10, 10, 10000, maxBallsNb,
+    this.sliderBallsNumber = new Slider(20, deltaJ - blockHeight + 20, 20 + deltaI - 360, 40, 10, 10, 10000, maxBallsNb,
     lightBackGroundColor, lightBackGroundColor, strokeColor, hoverColor);
     this.sliderBallsNumber.init();
     this.buttonDraw = new Button(deltaI - 120, deltaJ - blockHeight + 20, 100, 40, "Appliquer", lightBackGroundColor, strokeColor, strokeColor, hoverColor, backGroundColor, true);
@@ -90,7 +90,7 @@ class Application {
     noStroke();
     fill(textColor);
     textSize(12);
-    text("Nb de balles : " + maxBallsNb, 540, deltaJ - blockHeight + 40);
+    text("Nb de balles : " + maxBallsNb, deltaI - 300, deltaJ - blockHeight + 40);
     this.buttonDraw.drawButton();
     this.buttonDraw.run();
     if(this.buttonDraw.getIsClicked()) {
@@ -108,7 +108,7 @@ class Application {
       fill(textColor);
       textSize(12);
       text("Settings : [S ou s] / Aide : [H ou h]", 20, deltaJ - 40);
-      text("Application qui simule le mouvement brownien de balles colorées suivant l'ordre d'appatition.", 20, deltaJ - 20);
+      text("Application qui simule le mouvement brownien de balles qui sont colorées suivant l'ordre d'apparition.", 20, deltaJ - 20);
     }
   }
 }
