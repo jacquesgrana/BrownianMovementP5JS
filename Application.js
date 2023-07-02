@@ -5,7 +5,7 @@ class Application {
   
   /**
   contructeur
-  balles : tableau des balles qui sont affichées ([Ball])
+  balls : tableau des balles qui sont affichées ([Ball])
   sliderBallsNumber : Slider qui détermine le nombre de balles présentes dans le tableau (Slider)
   buttonDraw : Button qui reset le tableau (Button)
   */
@@ -85,6 +85,7 @@ class Application {
     noStroke();
     fill(lightBackGroundColor); // backGroundColor
     rect(0, deltaJ - blockHeight, deltaI, deltaJ);
+    this.sliderBallsNumber.drawSlider();
     maxBallsNb = (int) (this.sliderBallsNumber.run());
     console.log(`maxBallsNb : ${maxBallsNb}`);
     noStroke();
