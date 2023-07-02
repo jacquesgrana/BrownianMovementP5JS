@@ -52,8 +52,12 @@ class Application {
       ball.moveRandomly();
     });
     this.drawFooter();
+    this.showHelp();
   }
   
+  /**
+  Procédure qui affiche le footer des settings
+  */
   drawFooter() {
     if(showSettings) {
       this.showSettings();
@@ -92,6 +96,19 @@ class Application {
     if(this.buttonDraw.getIsClicked()) {
       this.initBalls();
       this.buttonDraw.setIsClicked(false)
+    }
+  }
+  
+  /**
+  Procédure qui affiche le texte de l'aide
+  */
+  showHelp() {
+    if(showHelp) {
+      noStroke();
+      fill(textColor);
+      textSize(12);
+      text("Settings : [S ou s] / Aide : [H ou h]", 20, deltaJ - 40);
+      text("Application qui simule le mouvement brownien de balles colorées suivant l'ordre d'appatition.", 20, deltaJ - 20);
     }
   }
 }
