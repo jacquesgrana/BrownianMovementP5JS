@@ -1,3 +1,6 @@
+  /**
+  Variables globales de l'application
+  */
   var deltaI = window.innerWidth;
   var deltaJ = window.innerHeight;
   var radius = 2;
@@ -18,6 +21,9 @@
   
   var blockHeight = 90;
   
+  /**
+  Procédure qui définie les couleurs de l'application
+  */
   function initColors() {
      backGroundColor = color(0);
      ballStrokeColor = color(0);

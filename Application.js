@@ -1,27 +1,37 @@
+/**
+Classe principale de l'application
+*/
 class Application {
   
-  
-
+  /**
+  contructeur
+  balles : tableau des balles qui sont affichées ([Ball])
+  sliderBallsNumber : Slider qui détermine le nombre de balles présentes dans le tableau (Slider)
+  buttonDraw : Button qui reset le tableau (Button)
+  */
   constructor() {
     this.balls = [];
     this.sliderBallsNumber;
     this.buttonDraw;
   }
 
+  /**
+  Procédure d'initialisation
+  */
   init() {
     createCanvas(deltaI, deltaJ);
     initColors();
     frameRate(appFrameRate);
     this.initBalls();
-    
     this.sliderBallsNumber = new Slider(20, deltaJ - blockHeight + 20, 500, 40, 10, 10, 10000, maxBallsNb,
     backGroundColor, lightBackGroundColor, strokeColor, hoverColor);
     this.sliderBallsNumber.init();
-    
     this.buttonDraw = new Button(deltaI - 100, deltaJ - blockHeight + 20, 80, 40, "Reset", lightBackGroundColor, strokeColor, strokeColor, hoverColor, backGroundColor, true);
-    this.buttonDraw.init();
   }
   
+  /**
+  Procédure qui efface et rempli le tableau de balles
+  */
   initBalls() {
    this.balls = [];
    for (let i=0; i<maxBallsNb; i++) {
@@ -31,6 +41,9 @@ class Application {
     } 
   }
 
+  /**
+  Procédure qui démarre l'application
+  */
   run() {
     noStroke();
     background(backGroundColor);
@@ -49,6 +62,9 @@ class Application {
     
   }
   
+  /**
+  Procédure qui dessine le dégradé des couleurs possibles des balles
+  */
   showGradient() {
     for(let i=0; i<deltaI; i++) {
       noStroke();
@@ -58,6 +74,9 @@ class Application {
     }
   }
   
+  /**
+  Procédure qui affiche la fenêtre des settings
+  */
   showSettings() {
     noStroke();
     fill(lightBackGroundColor); // backGroundColor

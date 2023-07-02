@@ -1,3 +1,6 @@
+/**
+Launcher de l'application
+*/
 var app = new Application();
 
 function setup() {

@@ -1,3 +1,6 @@
+/**
+Procédure de gestion des évènements du clavier
+*/
 function keyTyped() {
   if (key === 'H' || key === 'h') {
     showHelp = !showHelp;

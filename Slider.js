@@ -3,28 +3,26 @@
 */
 
 class Slider {
-/*
-  private Integer posI; // position horizontale du slider
-  private Integer posJ; // position verticale du slider
-  private Integer sizeI; // largeur du slider en pixels
-  private Integer sizeJ; // hauteur du slider en pixels
-  private Integer gapI; // ecart de détection en pixels pour permettre d'obtenir facilement la valeur min ou la valeur max quand la poignée arrive aux extrémités
-  private float minVal; // minimum de la valeur à renvoyer
-  private float maxVal; // maximum de la valeur à renvoyer
-  private float startX; // valeur de départ de la valeur à renvoyer, positionne la poignée à la bonne position
-  private Integer handleWidth;// largeur de la poignée en pixels
-  private color sliderBgColor; // couleur de fond du slider
-  private color handleBgColor; // couleur de fond de la poignée
-  private color strokeColor; // couleur du contour
-  private color strokeColorMouseOver; // couleur de contour allumé
-  private color handleStkColor; // couleur du contour de la poignée
-  private color sliderStkColor; // couleur du contour du slider
-  private Double valToReturn; // valeur à retourner
-*/
 
-/*
- * Constructeur
- */
+  /*
+  Constructeur
+  posI : position horizontale du slider
+  posJ : position verticale du slider
+  sizeI : largeur du slider en pixels
+  sizeJ : hauteur du slider en pixels
+  gapI : ecart de détection en pixels pour permettre d'obtenir facilement la valeur min ou la valeur max quand la poignée arrive aux extrémités
+  minVal : minimum de la valeur à renvoyer
+  maxVal : maximum de la valeur à renvoyer
+  startX : valeur de départ de la valeur à renvoyer, positionne la poignée à la bonne position
+  handleWidth : largeur de la poignée en pixels (color)
+  sliderBgColor : couleur de fond du slider (color)
+  handleBgColor : couleur de fond de la poignée (color)
+  strokeColor : couleur du contour (color)
+  strokeColorMouseOver : couleur de contour allumé (color)
+  handleStkColor : couleur du contour de la poignée (color)
+  sliderStkColor : couleur du contour du slider (color)
+  valToReturn : valeur à retourner
+  */
   constructor(posI, posJ, sizeI, sizeJ, handleWidth, minVal, maxVal, startX,
     sliderBgColor, handleBgColor, strokeColor, strokeColorMouseOver) {
     this.posI = posI;
@@ -44,12 +42,17 @@ class Slider {
     this.valToReturn = startX;
   }
 
+  /**
+  Procédure d'initialisation
+  */
   init() {
-    //this.valToReturn = this.startX;
     this.handleStkColor = this.strokeColor;
     this.sliderStkColor = this.strokeColor;
   }
 
+  /**
+  Procédure qui dessine et active l'écoute des evenements de la souris dans le slider
+  */
   run() {
     // dessin du slider
     strokeWeight(1);
@@ -86,6 +89,9 @@ class Slider {
     return this.valToReturn;
   }
   
+  /**
+  Setters
+  */
   setStartX(startX) {
    this.startX = startX; 
   }

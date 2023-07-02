@@ -1,7 +1,17 @@
+/**
+Classe  qui représente l'objet Ball
+*/
 class Ball {
   
   /**
   Constructeur
+  radius : rayon de la balle en pixel
+  strokeWidth : épaisseur du contour de la balle en pixel
+  posI : position horizontale dans la fenêtre en pixel
+  posJ :  position verticale dans la fenêtre en pixel
+  fillColor : couleur de remplissage de la balle (objet color)
+  strokeColor : couleur du contour de la balle (objet color)
+  isToDraw : vrai si la balle doit être dessinée, faux sinon
   */
   constructor(radius, strokeWidth, posI, posJ, fillColor, strokeColor, isToDraw) {
     this.radius = radius;
@@ -13,9 +23,9 @@ class Ball {
     this.isToDraw = isToDraw;
   }
 
-/**
-Méthode qui affiche la balle selon ses attributs.
-*/
+  /**
+  Méthode qui affiche la balle selon ses attributs.
+  */
   drawBall() {
     if (this.isToDraw) {
       strokeWeight(this.strokeWidth);
@@ -25,12 +35,11 @@ Méthode qui affiche la balle selon ses attributs.
     }
   }
 
-/**
-Méthode qui modifie les coordonnées de la balle de manière aléatoire dans les 8 directions possibles.
-*/
+  /**
+  Méthode qui modifie les coordonnées de la balle de manière aléatoire dans les 8 directions possibles.
+  */
   moveRandomly() {
     let newDir = (int) (random(8));
-    //this.fillColor = calculateRVB(newDir, 7, gradientStart, gradientRange);
     switch(newDir) {
     case 0 :
       this.posI -= stepI;
